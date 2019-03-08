@@ -1,0 +1,363 @@
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%); } }
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0; }
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 35px; } }
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 150px; } }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #1c577f; }
+
+h2 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  color: #1c577f;
+  font-weight: 600;
+  -webkit-text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+  letter-spacing: .9rem; }
+
+p {
+  font-size: 18px; }
+
+footer {
+  padding: 0 !important; }
+
+.container-fluid {
+  padding: 8rem 5rem; }
+
+.col-sm-8 {
+  padding: 5rem;
+  text-align: justify; }
+
+.navbar {
+  top: 0;
+  height: 7rem;
+  background-image: linear-gradient(to right bottom, #164463, #2487c9, #1c577f);
+  z-index: 9999;
+  border: 0;
+  font-size: 1.5rem !important;
+  letter-spacing: .4rem;
+  border-radius: 0; }
+
+.navbar li a, .navbar .navbar-brand {
+  color: #c9e2f3 !important;
+  margin-top: 1rem; }
+
+.navbar-nav li a:hover {
+  color: #fff !important;
+  border-bottom: 0.2rem solid #c9e2f3;
+  -webkit-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s; }
+
+.navbar-nav li.active a {
+  background-color: transparent !important; }
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+  background-color: #c9e2f3 !important; }
+
+.nav__logo-lionsar {
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+  padding: 0;
+  width: 6.4rem;
+  height: 6.4rem; }
+
+.header__slideshow {
+  color: #fff;
+  top: -7rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1; }
+
+.header__text-fixed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; }
+
+.item h2 {
+  letter-spacing: 2.6rem !important; }
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.modal-content {
+  background-color: rgba(36, 135, 201, 0.5); }
+
+.modal-title {
+  color: #fff !important; }
+
+ul a {
+  text-transform: uppercase; }
+
+.ul-modal {
+  color: #fff !important;
+  font-size: 2rem;
+  list-style-type: none;
+  text-align: center !important; }
+
+.modal-btn {
+  margin-top: 2rem;
+  background-color: transparent;
+  color: #2487c9; }
+
+.bg-grey {
+  background-image: linear-gradient(to right bottom, #e5f1f9, #add3ed); }
+
+.scroll-nav {
+  text-align: center;
+  margin-top: 1.5rem; }
+
+.scroll-nav h4 {
+  margin-top: 0; }
+
+.footer__navigation {
+  border-top: 0.1rem solid #2487c9;
+  padding-top: 2rem;
+  display: inline-block;
+  font-size: 1.4rem !important;
+  letter-spacing: .2rem; }
+
+.footer__list {
+  list-style: none; }
+
+.footer__item {
+  display: inline-block; }
+  .footer__item:not(:last-child) {
+    margin-right: 1.5rem; }
+
+.footer__link, .footer__link:link, .footer__link:visited {
+  color: #2487c9;
+  background-color: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all .2s; }
+
+.footer__link:hover, .footer__link:active {
+  color: #2487c9;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: scale(1.1); }
+
+.footer__copyright {
+  border-top: 1px solid #2487c9;
+  padding-top: 2rem;
+  width: 80%;
+  float: right; }
+
+footer .glyphicon {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #2487c9; }
+
+.footer__image {
+  width: 100%;
+  height: auto; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 2.5rem;
+  display: inline-block;
+  border-radius: .2rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: .2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn-default {
+  background-color: #c9e2f3;
+  border-radius: .5rem !important; }
+
+.card {
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 50rem;
+  margin: 0 10px; }
+  .card__side {
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55); }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: url(/img/provision-2-small.jpg);
+        background-size: cover; }
+      .card__side--back-2 {
+        background-image: url(/img/bonded-store-2-small.jpg);
+        background-size: cover; }
+      .card__side--back-3 {
+        background-image: url(/img/techsupply-2-small.jpg);
+        background-size: cover; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 50rem; }
+    .card__picture--1 {
+      background-image: url(/img/provision-1-small.jpg); }
+    .card__picture--2 {
+      background-image: url(/img/bonded-store-1-small.jpg); }
+    .card__picture--3 {
+      background-image: url(/img/techsupply-1-small.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+    .card__heading-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+      .card__heading-span--1 {
+        background-image: linear-gradient(to right bottom, rgba(28, 87, 127, 0.85), rgba(36, 135, 201, 0.85)); }
+      .card__heading-span--2 {
+        background-image: linear-gradient(to right bottom, rgba(28, 87, 127, 0.85), rgba(36, 135, 201, 0.85)); }
+      .card__heading-span--3 {
+        background-image: linear-gradient(to right bottom, rgba(28, 87, 127, 0.85), rgba(36, 135, 201, 0.85)); }
+
+.card-logo {
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 50rem;
+  margin: 60px; }
+  .card-logo:hover .card-logo__side--front {
+    transform: rotateY(-180deg); }
+  .card-logo:hover .card-logo__side--back {
+    transform: rotateY(0); }
+  .card-logo__side {
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55); }
+    .card-logo__side--back {
+      transform: rotateY(180deg); }
+      .card-logo__side--back-4 {
+        background-image: url(/img/buklet-back-small.jpg);
+        background-size: cover; }
+  .card-logo__picture {
+    background-size: cover;
+    height: 50rem; }
+    .card-logo__picture--4 {
+      background-image: url(/img/buklet-front-small.jpg); }
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #19b5fe;
+  display: none; }
+
+.carousel-indicators li {
+  border-color: #1c577f;
+  display: none; }
+
+.carousel-indicators li.active {
+  background-color: #1c577f;
+  display: none; }
+
+.carousel__item-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem !important;
+  text-transform: uppercase;
+  letter-spacing: .6rem;
+  -webkit-text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.85);
+  text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.85); }
+
+.slideanim {
+  visibility: hidden; }
+
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1.2s;
+  -webkit-animation-duration: 1.2s;
+  visibility: visible; }

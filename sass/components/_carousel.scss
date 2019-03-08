@@ -1,0 +1,27 @@
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: $color-secondary;
+    display: none;
+    }
+  
+.carousel-indicators li {
+    border-color: $color-primary;
+    display: none;
+    }
+
+.carousel-indicators li.active {
+    background-color: $color-primary;
+    display: none;
+    }
+
+.carousel__item-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    -webkit-text-shadow: .5rem .5rem .5rem rgba($color-black, 0.85);
+    text-shadow: .5rem .5rem .5rem rgba($color-black, 0.85);
+    }
