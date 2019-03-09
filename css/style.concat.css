@@ -1,3 +1,30 @@
+/*
+0   - 600px:    Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal style desktop
+1800px + ... :  Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+#############################
+###     We have to use    ###
+### 'em' instead of 'rem' ###
+##   in mediaqueries !!!  ###
+#############################
+
+ORDER: 
+base + typography ==>
+general layout +grid ==>
+page layout ==>
+components
+
+1em = 16px
+*/
 @keyframes slide {
   0% {
     opacity: 0;
@@ -14,17 +41,28 @@
     opacity: 1;
     -webkit-transform: translateY(0%); } }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 48em) {
   .col-sm-4 {
     text-align: center;
-    margin: 25px 0; }
+    margin: 1.56em 0; }
   .btn-lg {
     width: 100%;
-    margin-bottom: 35px; } }
+    margin-bottom: 2.19em; } }
 
-@media screen and (max-width: 480px) {
-  .logo {
-    font-size: 150px; } }
+html {
+  font-size: 62.5%;
+  /*@include respond(phone) {   // width < 600px
+        font-size: 30%;  //1rem = 4.8px, 4.8/16 = 30%
+    }*/ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -41,15 +79,24 @@ h2 {
   text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
   margin-bottom: 2.5rem;
   letter-spacing: .9rem; }
+  @media only screen and (max-width: 48em) {
+    h2 {
+      font-size: 3rem; } }
 
 p {
-  font-size: 18px; }
+  font-size: 1.8rem; }
+  @media only screen and (max-width: 48em) {
+    p {
+      font-size: 2.1rem; } }
 
 footer {
-  padding: 0 !important; }
+  padding: .5rem !important; }
 
 .container-fluid {
-  padding: 8rem 5rem; }
+  padding: 5rem; }
+  @media only screen and (max-width: 48em) {
+    .container-fluid {
+      padding: 7rem 11rem; } }
 
 .col-sm-8 {
   padding: 5rem;
@@ -68,12 +115,24 @@ footer {
 .navbar li a, .navbar .navbar-brand {
   color: #c9e2f3 !important;
   margin-top: 1rem; }
+  @media only screen and (max-width: 48em) {
+    .navbar li a, .navbar .navbar-brand {
+      color: #000 !important;
+      text-shadow: 1px 1px 0 #fff !important;
+      font-weight: 900;
+      font-size: 2rem; } }
 
 .navbar-nav li a:hover {
   color: #fff !important;
   border-bottom: 0.2rem solid #c9e2f3;
   -webkit-transition: border-bottom 0.3s;
   transition: border-bottom 0.3s; }
+  @media only screen and (max-width: 48em) {
+    .navbar-nav li a:hover {
+      color: #000 !important;
+      text-shadow: 1px 1px 0 #fff !important;
+      font-weight: 900;
+      font-size: 2rem; } }
 
 .navbar-nav li.active a {
   background-color: transparent !important; }
@@ -82,6 +141,16 @@ footer {
   border-color: transparent;
   color: #fff !important;
   background-color: #c9e2f3 !important; }
+  @media only screen and (max-width: 48em) {
+    .navbar-default .navbar-toggle {
+      color: #000 !important;
+      text-shadow: 1px 1px 0 #fff !important;
+      font-weight: 900;
+      font-size: 2rem; } }
+
+@media only screen and (max-width: 48em) {
+  .navbar-collapse {
+    width: 30%; } }
 
 .nav__logo-lionsar {
   position: absolute;
@@ -102,6 +171,14 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1; }
+  @media only screen and (max-width: 48em) {
+    .header__slideshow {
+      top: 0 !important; } }
+
+@media only screen and (max-width: 48em) {
+  .header__slideshow img {
+    height: 100vh !important;
+    object-fit: cover !important; } }
 
 .header__text-fixed {
   position: absolute;
@@ -109,6 +186,9 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10; }
+  @media only screen and (max-width: 48em) {
+    .header__text-fixed {
+      display: none; } }
 
 .item h2 {
   letter-spacing: 2.6rem !important; }
@@ -116,10 +196,11 @@ footer {
 .modal {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 100%; }
 
 .modal-content {
-  background-color: rgba(36, 135, 201, 0.5); }
+  background-color: rgba(28, 87, 127, 0.7); }
 
 .modal-title {
   color: #fff !important; }
@@ -232,6 +313,10 @@ footer .glyphicon {
   background-color: #c9e2f3;
   border-radius: .5rem !important; }
 
+@media only screen and (max-width: 48em) {
+  .btn-text {
+    font-size: 2.3rem; } }
+
 .card {
   perspective: 100rem;
   -moz-perspective: 100rem;
@@ -300,7 +385,7 @@ footer .glyphicon {
   -moz-perspective: 100rem;
   position: relative;
   height: 50rem;
-  margin: 60px; }
+  margin: 6rem; }
   .card-logo:hover .card-logo__side--front {
     transform: rotateY(-180deg); }
   .card-logo:hover .card-logo__side--back {

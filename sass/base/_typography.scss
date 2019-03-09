@@ -12,6 +12,13 @@
 .navbar li a, .navbar .navbar-brand {
     color: $color-secondary-light !important;
     margin-top: 1rem;
+
+    @include respond(phone) {
+        color: $color-black !important;
+        text-shadow: 1px 1px 0 $color-white !important;
+        font-weight: 900;
+        font-size: 2rem;
+    }
 }
   
 .navbar-nav li a:hover {
@@ -19,6 +26,13 @@
     border-bottom: .2rem solid $color-secondary-light;
     -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
+
+    @include respond(phone) {
+        color: $color-black !important;
+        text-shadow: 1px 1px 0 $color-white !important;
+        font-weight: 900;
+        font-size: 2rem;
+    }
 }
   
 .navbar-nav li.active a {
@@ -28,7 +42,21 @@
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: $color-white !important;
-    background-color: $color-secondary-light !important;  
+    background-color: $color-secondary-light !important;
+
+    @include respond(phone) {
+        color: $color-black !important;
+        text-shadow: 1px 1px 0 $color-white !important;
+        font-weight: 900;
+        font-size: 2rem;
+    }
+}
+
+.navbar-collapse {
+
+    @include respond(phone) {
+        width: 30%;
+    }
 }
 
 .nav__logo-lionsar {
@@ -52,6 +80,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+
+    @include respond(phone) {
+        top: 0 !important;
+    }
+}
+
+.header__slideshow img {
+
+    @include respond(phone) {
+        height: 100vh !important;
+        object-fit: cover !important;
+    }
 }
   
 .header__text-fixed {
@@ -60,6 +100,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 .item h2 {
@@ -70,10 +114,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
   
 .modal-content {
-    background-color: rgba(36,135,201, .5);
+    background-color: rgba($color-primary, .7);
 }
   
 .modal-title {
