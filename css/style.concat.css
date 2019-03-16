@@ -75,8 +75,8 @@ h2 {
   text-transform: uppercase;
   color: #1c577f;
   font-weight: 600;
-  -webkit-text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
-  text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
+  -webkit-text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.55);
+  text-shadow: 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.55);
   margin-bottom: 2.5rem;
   letter-spacing: .9rem; }
   @media only screen and (max-width: 48em) {
